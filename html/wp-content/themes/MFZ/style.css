@@ -1,0 +1,631 @@
+/*
+ Theme Name:   Midwest Zonal Forum
+ Theme URI:    http://mzfna.org/
+ Description:  Canvas Framework, Child Theme
+ Author:       Kevin Grimley
+ Author URI:   http://kevingrimley.com
+ Template:     canvas
+ Version:      0.9
+ Tags:         MZF, NA
+ Text Domain:  mzfchild
+ TOC:	1) Common 
+ 		2) Header 
+ 		3) Navigation (768px Min @Media)
+ 		4) Timeline
+		5) Event/Calendar
+		6) Contact
+		7) Search Results
+		8) Footer
+		9) 1280px Max @Media
+	   10) 1050px Max @Media
+	   11) 965px Max @Media
+	   12) 905px Max @Media
+	   13) 768px Max @Media
+	   14) 730px Max @Media
+	   15) 610px Max @Media
+	   16) 480px Max @Media
+*/
+
+@import url("../canvas/style.css");
+
+/* Common Styles 
+-------------------------------*/
+
+h1.title, h2.title {
+	display: none;
+}
+
+a,
+a:link,
+a:visited {
+	color: #B6BB62;
+}
+
+a:hover {
+	color: #ff4800;
+}
+
+#content {
+    width: 75%;
+    padding-top: 25px;
+    background-color: #fff;
+}
+
+input#submit, 
+.submit.button {
+	background: #777866;
+}
+
+input#submit:hover,
+.submit.button:hover {
+	background: #245682;
+}
+
+ul.links {
+	padding: 0 0 0 10px;
+}
+
+ul.links li {
+	list-style-type: none;
+}
+
+.searchform .icon-search:before {
+    line-height: 1;
+}
+
+.relevanssi-query-term {
+    background: #F5F582;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.ms-form.ms-no-labels p {
+    margin-bottom: 0;
+}
+
+/* Header Styles 
+-------------------------------*/
+
+#header {
+    width: 75%;
+}
+
+#logo {
+	position: relative;
+	z-index: 10000;
+}
+
+#header-title-container {
+    position: relative;
+    float: right;
+    text-align: right;
+}
+#header-title-container a {
+	text-decoration: none;
+}
+
+#header-title {
+    font-size: 3.5em;
+    color: #fff;
+}
+
+#header-sub-title {
+    font-size: 1.5em;
+    color: #fbec04;
+}
+
+/* Navigation Styles 
+-------------------------------*/
+
+@media only screen and (min-width: 768px){
+
+	#nav-container {
+	    position: relative;
+	    top: -4em;
+	    width: 75%;
+	    margin: 0 auto !important;
+	}
+
+	#main-nav {
+	    position: absolute;
+	    right: 0;
+	    bottom: -3em;
+	}
+
+	ul.nav li.current_page_item a, 
+	ul.nav li.current_page_parent a, 
+	ul.nav li.current-menu-ancestor a, 
+	ul.nav li.current-cat a, 
+	ul.nav li.current-menu-item a {
+	    background: none;
+	    color: #e2c8c8;
+	}
+
+	#navigation ul.nav > li a:hover,
+	#navigation ul.nav > li:hover, 
+	#navigation ul.cart > li:hover, 
+	#navigation ul.cart > li:hover > ul > div {
+	    background: none !important;
+	    color: #fbec04;
+	}
+
+	#navigation .nav li.parent > a {
+		padding-right: 1em !important;
+	}
+
+	#navigation .nav li.parent > a:after {		
+		display: none !important;
+	}
+
+	ul.nav ul {
+	    top: 75% !important;
+	    border-radius: 0 0 5px 5px;
+	}
+
+	ul#main-nav li.menu-item ul.sub-menu li a {
+	    font-size: .9em;
+	}
+}
+
+/* Timeline Styles 
+-------------------------------*/
+
+.timelineMajor h2,
+.timelineEvent div.event_content .WordPressDate {
+    font-family: "Open Sans", Ariel, sans-serif;
+}
+
+.timelineMajor h2 span {
+    background-color: #2675AD;
+}
+
+dl.timelineMinor,
+div.timelineMajor:nth-of-type(2n) dl.timelineMinor {
+    background-color: #FAFBE5;
+}
+
+dl.timelineMinor:after,
+div.timelineMajor:nth-of-type(2n) dl.timelineMinor:before {
+    border: solid 8px #FAFBE5;
+    /* Must be changed in the viavi-wp-timeline/TimelineJquery/css/style5.css */
+}
+
+.timelineMinor dd h3 {
+    color: #555;
+    clear: both;
+    float: none;
+    font-size: 1em;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.timelineMinor dt {
+    white-space: normal;
+}
+
+.timelineMajor.left .timelineMinor dd p {
+	text-align: left;
+}
+
+.timelineMinor dt a,
+.timelineMinor dt a:link,
+.timelineMinor dt a:visited,
+.timelineMinor dt a.open,
+.timelineMinor dt a.closed {
+	color: #777866 !important;
+	font-size: 1.1em;
+	line-height: 1.2em;
+}
+
+.timelineMinor dt a:hover {
+	color: #ff4800 !important;
+}
+
+/* Event/Calendar Styles
+-------------------------------*/
+
+.ai1ec_event h1.title {
+    display: block;
+}
+
+.ai1ec-categories, 
+.single-ai1ec_event div#comments, 
+.single-ai1ec_event .post-meta,
+.timely.ai1ec-calendar-toolbar.ai1ec-clearfix,
+.single-ai1ec_event .post-entries,
+.single-ai1ec_event #post-author,
+.ai1ec-views-dropdown.ai1ec-btn-group.ai1ec-pull-right {
+    display: none;
+}
+
+ul.ai1ec-dropdown-menu.ai1ec-pull-right {
+    padding: 0;
+}
+
+.ai1ec-event-details.ai1ec-row {
+    display: table;
+    width: 100%;
+}
+
+.ai1ec-single-event .ai1ec-actions .ai1ec-btn-group-vertical {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.entry ul.ai1ec-dropdown-menu {
+	min-width: 200px;
+}
+
+.entry ul.ai1ec-dropdown-menu.ai1ec-pull-right li {
+    list-style-type: none;
+}
+
+.ai1ec-col-sm-7.ai1ec-col-sm-pull-5 {
+    float: none;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+    display: table-header-group;
+}
+
+.ai1ec-map.ai1ec-col-sm-5.ai1ec-col-sm-push-7 {
+    float: none;
+    left: 0;
+    width: 100%;
+    display: table-footer-group;;
+}
+
+.ai1ec-field-label.ai1ec-col-sm-4.ai1ec-col-md-5 {
+    width: 100%;
+    text-align: left;
+}
+
+.ai1ec-field-value.ai1ec-col-sm-8.ai1ec-col-md-7.dt-duration {
+    width: 100%;
+}
+
+.ai1ec-single-event #ai1ec-gmap-canvas, .ai1ec-multi-event #ai1ec-gmap-canvas {
+    height: 250px;
+}
+
+.ai1ec-stream-view .ai1ec-event-inner {
+    margin-left: 12px;
+}
+
+.ai1ec-event-avatar-wrap.ai1ec-pull-left {
+	display: none;
+}
+
+/* Contact Styles
+-------------------------------*/
+
+.page-template-template-contact-php .location-twitter {
+    margin: 0 0 1em;
+    padding: 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* Search Result Styles
+-------------------------------*/
+
+.search article .title {
+    display: block;
+    color: #3e804d;
+    font: bold 24px/1.2em 'Open Sans', arial, sans-serif;
+}
+
+.search article.page .title a:link {
+    color: #3e804d;
+}
+
+.search .ai1ec_event {
+    margin: 0 0 40px;
+}
+
+.search .post-meta,
+.search .post-more {
+    display: none;
+}
+
+/* Membership 2 Generated Pages
+--------------------------------*/
+
+.widget form#loginform {
+    margin-left: 0;
+}
+
+.ms-form.ms-no-labels p {
+    text-align: left;
+}
+
+.ms-membership-form-wrapper label {
+    display: inline;
+}
+
+.ms-membership-form-wrapper legend,
+.ms-price-details,
+#account-invoices,
+#account-activity {
+	display: none;
+}
+
+/* Footer Styles 
+-------------------------------*/
+
+#footer-widgets-container {
+    padding-bottom: 20px;
+}
+
+#footer-widgets-container {
+	text-align: justify;
+}
+
+#footer-widgets .widget {
+    width: 75%;
+    margin: 0 auto 2em;
+}  
+
+#footer-widgets .mc4wp-form {
+    margin: 1em .75em;
+}
+
+#footer-widgets p a {
+    color: #FBEC04 !important;
+}
+
+#footer-widgets-container .textwidget p,
+#footer-widgets-container .widget_mc4wp_widget h3,
+#footer-widgets .widget h3 {
+	color: #fff;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-date, 
+.ai1ec-agenda-view .ai1ec-date{
+	background: none;
+	border-top: none;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-date-title, 
+.ai1ec-agenda-view .ai1ec-date-title,
+.ai1ec-agenda-widget-view .ai1ec-event > a {
+	border: none;
+}
+
+/*----------------------------------*/
+
+#footer-container {
+    border-top: 1px solid rgba(128,127,243,0.7) !important;
+}
+
+div#copyright {
+    width: 100%;
+}
+
+#copyright p {
+    width: 100%;
+    text-align: center;
+}
+
+/* 1280px Max Styles
+----------------------------*/
+
+@media only screen and (max-width: 1280px){
+
+	#header-title {
+	    font-size: 2.5em;
+	}
+
+	#header-sub-title {
+	    font-size: 1.25em;
+	}
+
+	ul#main-nav {
+	    margin-right: -1em;
+	}
+
+}
+
+/* 1050px Max Styles
+----------------------------*/
+
+@media only screen and (max-width: 1050px){
+
+	#header-title {
+	    font-size: 2.25em;
+	}
+
+	#header-sub-title {
+	    font-size: 1.15em;
+	}
+
+	#navigation ul#main-nav {
+		margin-right: -1em;
+	    margin-bottom: 2em;
+	}
+
+	ul#main-nav li.menu-item a {
+	    font-size: 1.5em;
+	}
+
+}
+
+/* 965px Max Styles
+----------------------------*/
+
+@media screen and (max-width: 965px) {
+
+	#header-title {
+	    font-size: 2em;
+	}
+
+	#logo img {
+	    width: 75%;
+	}
+
+	#navigation ul#main-nav {
+	    margin-bottom: 0;
+	}
+
+	ul#main-nav li.menu-item a {
+	    font-size: 1.5em;
+	}
+
+	div[id^="ssfa-list-wrap"].ssfa-silk a.ssfa-twocol {
+	    width: 31%;
+	}
+
+}
+
+/* 905px Max Styles
+----------------------------*/
+
+@media screen and (max-width: 905px) {
+
+	#header-title {
+	    font-size: 1.5em;
+	}
+
+	#header-sub-title {
+	    font-size: 1em;
+	}
+
+	#navigation ul#main-nav {
+	    margin-bottom: 0;
+	}
+
+	ul#main-nav li.menu-item a {
+	    font-size: 1.25em;
+	}
+
+}
+
+
+/* 768px Max Styles
+----------------------------*/
+
+@media screen and (max-width: 768px) {
+	*,
+	#content {
+    	max-width: 100%;
+    	margin: 0 auto;
+	}
+
+	div#header-title-container {
+	    margin-bottom: 20px;
+	}
+
+	#logo {
+	    text-align: center;
+	}
+
+	#logo img {
+		width: 35%;
+	}
+
+	#header-title {
+	    font-size: 1.95em;
+	}
+
+	#header-sub-title {
+	    font-size: 1.15em;
+	}
+
+	.menus h3 {
+	    display: none;
+	}
+
+	body.full-width header#header {
+	    padding: 40px 0;
+	    width: 90%;
+	}
+
+	#footer-widgets .block {
+	    padding-top: 20px;
+	    max-width: 500px;
+	    margin: 0 auto;
+	}
+
+}
+
+/* 730px Max Styles
+----------------------------*/
+
+@media screen and (max-width: 730px) {
+
+	
+
+}
+
+/* 610px Max Styles
+----------------------------*/
+
+@media screen and (max-width: 610px) {
+
+	#header-title {
+	    font-size: 1.5em;
+	}
+
+	#header-sub-title {
+	    font-size: 1em;
+	}
+
+	.timelineMinor dt a, .timelineMinor dt a:link, .timelineMinor dt a:visited, .timelineMinor dt a.open, .timelineMinor dt a.closed {
+	    font-size: 1em;
+	    line-height: 1.1em;
+	}
+
+	a.ai1ec-date-title.ai1ec-load-view {
+	    display: none;
+	}
+
+	.widget_ai1ec_agenda_widget a.ai1ec-date-title.ai1ec-load-view {
+		display: block;
+	}
+
+	.ai1ec-agenda-view .ai1ec-date-events {
+	    margin: 0 0.75em;
+	}
+
+}
+
+/* 480px Max Styles
+----------------------------*/
+
+@media screen and (max-width: 480px) {
+
+	#header-title {
+	    font-size: 1.15em;
+	}
+
+	#header-sub-title {
+	    font-size: .9em;
+	}
+
+	div[id^="ssfa-list-wrap"].ssfa-silk a.ssfa-twocol {
+    width: 200px;
+}
+
+}
+
+/* 400px Max Styles
+----------------------------*/
+
+@media screen and (max-width: 400px) {
+
+	#header-title {
+	    font-size: 1em;
+	}
+
+	#header-sub-title {
+	    font-size: .75em;
+	}
+
+}
+
+
+
+
+
